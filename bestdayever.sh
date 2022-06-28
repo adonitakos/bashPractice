@@ -3,9 +3,9 @@
 name=$1
 compliment=$2
 
-user=$(whoami)
-whereami=$(pwd)
-date=$(date)
+user=$(whoami)  # $USER
+whereami=$(pwd) # $PWD
+date=$(date)	# $DATE
 
 echo "Good Morning $name!!"
 sleep 1

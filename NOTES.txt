@@ -1,0 +1,75 @@
+--------------------------------------------------- Personal Notes ---------------------------------------------------
+
+whatis {command} ---> outputs a very brief description of what the command does
+man {command} ---> outputs a whole manual of what the command entails
+apropos {keyword} ---> bring up a whole list of commands and their whatis descriptions that have word that was queried 
+
+
+pushd /{directory} ---> changing directory while 'bookmarking' your current directory
+popd ---> going BACK to the directory that was 'bookmarked' when you issued the pushd command
+
+file {file} ---> find out what type of file the specified file is (ex: BASH shell, Text, etc.)
+
+(Requires sudo apt install mlocate)
+locate {file/directory} ---> universal search across Linux file system to find your desired file/directory by name
+ * sudo updatedb ---> the locate command relies on a database that is auto-updated once a day; this command forces it.
+
+which {command} ---> find out where a command is in the Linux file system or IF it's installed in the first place
+
+history ---> displays a history of the (last 1000) commands used in the shell
+
+
+mkdir {directory name(s)} --> creates directory(ies)
+ * this can be done outside of current directory using / and ../
+
+touch (filename) ---> creates file(s) or updates their 'last' modified date & time
+
+cp {original file} {new copy} ---> make a copy of a specified file
+ * this can copy to and from other directories
+ * .bak will create backup file
+
+mv {file/directory} {destination} ---> move file/directory or rename it depending on case
+* You can also have fileA overwrite fileB 
+
+rm ---> removes a file
+rm -r ---> remove a directory (and all its contents)
+rm * ---> deletes all files (in current directory)
+rm * {filename} ---> deletes all files (in current directory) that only have the specified word in the filename
+rmdir {directory} ---> deletes all EMPTY directories (full directories and files will not be touched)
+
+
+cat {file} ---> outputs the content of a file (.txt, .sh, etc.)
+cat >> {filename} ---> creates a new file and adds content to it (quicker alternative to nano, vim, etc.)
+ * Differs from touch because you can also add content to the file immediately (like the alternatives)
+ * Doing this w/ an existing file will add on to it (on the next line(s))
+ * Doing this w/ an existing file AND a single > will OVERWRITE the contents with what you type
+cat fileA fileB ---> output contents of both files (in order specified)
+cat > file
+
+more {file} ---> viewer that lets you scroll down through file contents using space (old and useless)
+less {file} ---> viwer that lets you scroll up & down through file contents one-at-a-time using arrow keys
+
+Example of 'redirection':
+ls -a / > lsot.txt ---> list all the contents of the root directory AND THEN write it to a file
+
+
+--- Working with users ---
+sudo ---> running a command with elvated privileges
+sudo -s ---> stay within the elevated privileges (without having to always type "sudo" in your commands)
+ * Type "exit" to get out of this mode
+ * This is SAFER than su, which is more 'vulnerable'
+su {user} ---> change over to a different user with their BASH settings BUT still in your home directory
+su  - {user} ---> change over to a different user with their BASH settings AND their home directory
+
+users ---> see which users are logged into the system
+ * If both a Desktop Environment and Terminal are being used simultaneously, two usernames will show up
+ * Even if you su - another user, that other user would not show up b/c you are 'masquerading' as that user
+
+id ---> outputs all 'relevant information' about a user
+ * uid ---> the user identifier (so it can be accross multiple PCs in business w/ server running Kerberos)
+ * Helpful if you are trying to figure out why something doesn't work
+ * File that lives in /etc directory called password, which holds all this outputted information
+
+
+
+
