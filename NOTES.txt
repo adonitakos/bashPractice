@@ -17,6 +17,7 @@ locate {file/directory} ---> universal search across Linux file system to find y
 which {command} ---> find out where a command is in the Linux file system or IF it's installed in the first place
 
 history ---> displays a history of the (last 1000) commands used in the shell
+history -c ---> deletes all history of commands
 
 
 mkdir {directory name(s)} --> creates directory(ies)
@@ -70,6 +71,9 @@ id ---> outputs all 'relevant information' about a user
  * Helpful if you are trying to figure out why something doesn't work
  * File that lives in /etc directory called password, which holds all this outputted information
 
+
+echo "My favorite movie is \"Limitless\" "
+ * This is how to echo print a statement with quotations in it
 
 
 
